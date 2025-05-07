@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Work Hours Report</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>WORK HOURS REPORT</h1>
+        <div id="report-section" class="report-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Hours Worked</th>
+                        <th>Week Off</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be filled dynamically -->
+                </tbody>
+            </table>
+            <h3>Total Hours: <span id="total-hours">0:00</span></h3>
+        </div>
+
+        <button id="downloadReportBtn" class="download-btn">
+            📥 Download Report
+        </button>
+    </div>
+
+    <!-- Required libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="report.js"></script>
+</body>
+</html>

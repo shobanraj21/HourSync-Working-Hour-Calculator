@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Hours Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="menu-content" id="menu">
+            
+            <button onclick="redirectToReport()">📥 Download Report</button>
+            <button onclick="resetTracker()">🔄 Reset Tracker</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>HOURSYNC</h2>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date">
+
+        <label for="startTime">Start Time:</label>
+        <input type="text" id="startTime" placeholder="10:21AM">
+
+        <label for="endTime">End Time:</label>
+        <input type="text" id="endTime" placeholder="05:30PM">
+
+        <label for="weekOff">Week Off:</label>
+        <input type="checkbox" id="weekOff">
+
+        <button onclick="addEntry()">➕ Add</button>
+
+        <table id="workTable">
+            <tr>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Hours Worked</th>
+                <th>Week Off</th>
+                <th>Action</th>
+            </tr>
+        </table>
+
+        <p class="total">Total Hours: <span id="totalHours">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
